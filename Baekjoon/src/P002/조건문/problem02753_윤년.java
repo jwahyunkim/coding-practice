@@ -11,34 +11,24 @@ import java.util.*;
 public class problem02753_윤년 {
 	
 	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int input = scr.nextInt();
 		
-		
-		
-                int leap;		
-				Scanner scr = new Scanner(System.in);
-				int year = scr.nextInt();
-				
-				if (year%400==0) {
-					leap = 1;					
+		if(input%4==0) {
+			if(input%100==0) {
+				if(input%400==0) {
+					System.out.println("1");
+				}else {
+					System.out.println("0");
 				}
-				else if (year%100==0) {
-					leap = 0;
-				
-				}
-				else if (year%4==0) {
-					leap= 1;
-				}
-				else {
-					leap=0;
-				}
-				
-				System.out.println(leap);
-				scr.close();
-				
-					
+			}else {
+				System.out.println("1");
+			}
+		}else {
+			System.out.println("0");
+		}
 		
-		
-				
+		scr.close();
 	}
 
 }

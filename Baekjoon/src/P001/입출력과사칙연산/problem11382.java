@@ -19,7 +19,7 @@ public class problem11382 {
 		
 		System.out.println(A+B+C);
 		
-	scr.close();
+		scr.close();
 	
 	
 	}

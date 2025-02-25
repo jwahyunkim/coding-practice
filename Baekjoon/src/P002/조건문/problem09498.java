@@ -10,30 +10,22 @@ import java.util.*;
 public class problem09498 {
 	
 	public static void main(String[] args) {
-
-		char grade;
 		Scanner scr = new Scanner(System.in);
 		int score = scr.nextInt();
-		if (score>=90) {
-			grade = 'A';
-		}
-		else if (score>=80) {
-			grade = 'B';
-		}
-		else if (score>=70) {
-			grade = 'C';
-		}
-		else if (score>=60) {
-			grade = 'D';
-		}
-		else  {
-			grade = 'F';
+		
+		if(score>=90) {
+			System.out.println("A");
+		}else if(score>=80) {
+			System.out.println("B");
+		}else if(score>=70) {
+			System.out.println("C");
+		}else if(score>=60) {
+			System.out.println("D");
+		}else  {
+			System.out.println("F");
 		}
 		
-		
-		System.out.println(grade);
 		scr.close();
-		
 	}
 
 }
