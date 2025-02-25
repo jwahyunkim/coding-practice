@@ -1,0 +1,24 @@
+package P002.조건문;
+import java.util.*;
+public class problem02480_주사위문제 {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int A = scr.nextInt();
+		int B = scr.nextInt();
+		int C = scr.nextInt();
+		int result;
+		if (A==B&&A==C) {result= 10000+A*1000;}
+		else if (A==B) {result= 1000+A*100;}
+		else if (A==C) {result= 1000+A*100;}
+		else if (B==C) {result= 1000+B*100;}
+		else if (A>B&&A>C) {result=A*100;}
+		else if (B>A&&B>C) {result=B*100;}
+		else  {result=C*100;}
+		
+		System.out.println(result);
+		scr.close();
+		
+		
+	}
+
+}

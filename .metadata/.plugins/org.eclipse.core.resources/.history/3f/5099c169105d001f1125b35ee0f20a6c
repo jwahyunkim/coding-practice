@@ -1,0 +1,22 @@
+package Baskjoon;
+import java.util.*;
+public class problem18108 {
+
+	public static void main(String[] args) {
+//서기 연도를 알아보고 싶은 불기 연도 y가 주어진다. (1000 ≤ y ≤ 3000)
+		
+		Scanner scr = new Scanner(System.in);
+		int y= scr.nextInt();
+		scr.close();
+		
+		System.out.println(y-543);
+		
+		
+		
+
+		
+
+		
+	}
+
+}
