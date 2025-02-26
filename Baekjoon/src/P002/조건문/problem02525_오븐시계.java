@@ -8,21 +8,22 @@ public class problem02525_오븐시계 {
 		Scanner scr = new Scanner(System.in);
 		int H = scr.nextInt();
 		int M = scr.nextInt();
-		int requiredTime = scr.nextInt();
+		int T = scr.nextInt();
+		int cal = 0;
 
-		if (M + requiredTime >= 60) {
-			H=H+(M + requiredTime)/60;
-			M = (M + requiredTime)%60;
-			if (H > 23) {
-				H = H%24;
-				
-			}
-		}else {
-			M=M+requiredTime;
-		}
+		cal = M + T;
 		
-		System.out.println(H+" "+M);
-		scr.close();
+		M = cal;
+		
+		if (cal / 60 > 0) {
+			H = H + cal / 60;
+			if (H >= 24) {
+				H = H - 24;
+			}
 
-	} 
+			M = cal % 60;
+		}
+
+		System.out.println(H + " " + M);
+	}
 }
