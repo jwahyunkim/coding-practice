@@ -8,15 +8,19 @@ public class problem02438 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		int n = Integer.parseInt(br.readLine());
-		
-		for(int i=0;i<n;i++) {
-			for(int j=0;j<i+1;j++) {
-				bw.write("*");
-				
+		int input = Integer.parseInt(br.readLine());
+		int i = 0;
+		while(i<input) {
+			i++;
+			int j = 0;
+			while(j<i) {
+				bw.write(String.valueOf("*"));
+				j++;
 			}
-			bw.write("\n");
+			bw.newLine();
 		}
 		bw.flush();
+		bw.close();
+		
 	}
 }

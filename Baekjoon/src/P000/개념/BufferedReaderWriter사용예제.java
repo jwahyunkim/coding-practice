@@ -9,7 +9,7 @@ public class BufferedReaderWriter사용예제 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		int n = Integer.parseInt(br.readLine());
-		
+		System.out.println(n);
 		for(int i = 0; i<n;i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			
