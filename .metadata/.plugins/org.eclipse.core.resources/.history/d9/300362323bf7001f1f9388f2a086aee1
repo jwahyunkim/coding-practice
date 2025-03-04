@@ -1,0 +1,47 @@
+package P004.배열;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class problem05597 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+		int i = 0;
+		ArrayList<Integer> list = new ArrayList<>();
+		while (true) {
+			String input = (br.readLine());
+
+			if (input == null || input.isEmpty()) {
+				break;
+			}
+			int studentNumber = Integer.parseInt(input);
+			list.add(studentNumber);
+			i++;
+		}
+		System.out.println(list);
+
+		int max = Integer.MIN_VALUE;
+		for (int l : list) {
+			max = (l > max) ? l : max;
+		}
+		System.out.println(max);
+
+		ArrayList<Integer> missing = new ArrayList<>();
+		for (int k = 1; k <= max; k++) {
+			for (int j = 0; j < list.size(); j++) {
+				if(k!=list.get(i)) {
+					
+				}
+			}
+
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+package P004.배열;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class problem01546 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+		int N = Integer.parseInt(br.readLine());
+		int[] subject = new int[N];
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		int max = Integer.MIN_VALUE;
+		int sum = 0;
+		int cnt = 0;
+		while (!st.hasMoreTokens()) {
+			subject[cnt] = Integer.parseInt(st.nextToken());
+			max = (subject[cnt] > max) ? subject[cnt] : max;
+			sum = sum + subject[cnt];
+			
+			System.out.println(subject[cnt]);
+			System.out.println(max);
+			System.out.println(sum);
+			cnt++;
+		}
+
+		double nAvg = 10 * sum / (N * max);
+		bw.write(nAvg + "");
+		bw.flush();
+		bw.close();
+		br.close();
+	}
+}
